@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run gfg pytest tests
+docker run gfg bash ./scripts/inner_test.sh
