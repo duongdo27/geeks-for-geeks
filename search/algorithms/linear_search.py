@@ -9,6 +9,8 @@ def linear_search(array, value):
     :param value: value to search for
     :return: index of the value
     If not found, return -1
+
+    Time complexity: O(n)
     """
     for idx, ele in enumerate(array):
         if ele == value:
