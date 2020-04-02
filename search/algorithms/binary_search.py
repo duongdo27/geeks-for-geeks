@@ -1,6 +1,7 @@
 """
 Link: https://www.geeksforgeeks.org/binary-search/
 """
+# pylint: disable=inconsistent-return-statements
 
 
 def binary_recursive_search(array, value, left, right):
@@ -27,11 +28,11 @@ def binary_recursive_search(array, value, left, right):
 
     # if value less than the middle point, recursive the left part
     if value < array[mid]:
-        return binary_recursive_search(array, value, left, mid-1)
+        return binary_recursive_search(array, value, left, mid - 1)
 
     # if value bigger than the middle point, recursive the right part
     if value > array[mid]:
-        return binary_recursive_search(array, value, mid+1, right)
+        return binary_recursive_search(array, value, mid + 1, right)
 
 
 def binary_search(array, value):
@@ -43,4 +44,4 @@ def binary_search(array, value):
 
     Time complexity: O(log(n))
     """
-    return binary_recursive_search(array, value, 0, len(array)-1)
+    return binary_recursive_search(array, value, 0, len(array) - 1)

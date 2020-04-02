@@ -1,6 +1,12 @@
 from search.algorithms.binary_search import binary_search
 
 
+def test_empty_array():
+    array = []
+    value = 4
+    assert binary_search(array, value) == -1
+
+
 def test_not_found():
     array = [1, 2, 3]
     value = 4
