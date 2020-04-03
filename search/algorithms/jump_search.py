@@ -22,7 +22,8 @@ def jump_search(array, value):
     step = int(math.sqrt(n))
 
     # Loop through the list with step
-    for idx in list(range(0, n, step)) + [n - 1]:
+    idx = 0
+    while True:
         # Found the value
         if array[idx] == value:
             return idx
@@ -34,5 +35,9 @@ def jump_search(array, value):
                     return idx - offset
             return -1
 
-    # If not found, return -1
-    return -1
+        # Not found through the whole list
+        if idx >= n - 1:
+            return -1
+
+        # Increment by step
+        idx = min(idx + step, n - 1)
