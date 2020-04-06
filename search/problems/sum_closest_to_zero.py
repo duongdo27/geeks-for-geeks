@@ -32,9 +32,3 @@ def sum_closest_to_zero(array):
         else:
             left += 1
     return array[min_left], array[min_right]
-
-
-if __name__ == '__main__':
-    #sum_closest_to_zero([1, 3, 4, 5, 6, 2, 7, 9])
-    sum_closest_to_zero([1, -2, 3, -4, 6, -7, 7, 9])
-    #sum_closest_to_zero([1, 60, -10, 70, -80, 85])
